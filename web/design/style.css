@@ -1,0 +1,301 @@
+body, html {
+    height1: 100%;
+}
+header {
+    background: #666;
+    color:#fff;
+    padding:.3em 2em;
+}
+header a.logo {
+    color:#fff;
+    font-size:1.5em;
+}
+#grid {
+    height1:100%;
+    padding:0 0 0 2em;
+}
+aside {
+    background: #eee;
+    padding:2em 2em 2em 0;
+    height1: 100%;
+}
+aside .category {
+    color:#666;
+    font-weight: bold;
+}
+aside .uk-parent {
+    border-bottom:1px solid #ccc;
+}
+aside .uk-nav-sub {
+    margin:0 0 1em;
+}
+.price {
+    border:1px solid #ddd;
+    border-radius: 3px;
+    padding:.2em 1em;
+    display: inline-block;
+    margin:.1em .2em .1em 0;
+    background: rgba(0,0,0,.03);
+}
+.price * {
+    user-select: none;
+    -webkit-user-select: none;
+}
+aside .price {
+    background:#fff;
+}
+.parent {
+    padding:.2em 1em;
+    display: inline-block;
+    margin:.5em .2em .5em 0;
+}
+.price .cost {
+    display: inline-block;
+    margin:0 0 0 .7em;
+}
+.price .costtimes {
+    white-space: nowrap;
+    padding-left:.2em;
+    display: none;
+}
+.price .costtimes input {
+    width:30px;
+    min-width: 30px !important;
+    height: 14px;
+    font-size:.8em;
+    margin-left:.2em;
+    text-align: center;
+}
+.price .costtimes .uk-badge {
+    width:20px;
+    background: #999;
+    cursor: pointer;
+    font-size:1.2em;
+    font-weight: bold;
+}
+.price .description {
+    font-style: italic;
+    font-size: .8em;
+    color: #666;
+}
+.price .remove {
+    -webkit-appearance: none;
+    margin: 0 0 0 .5em;
+    border: none;
+    overflow: visible;
+    text-transform: none;
+    padding: 0;
+    background: transparent;
+    box-sizing: content-box;
+    width: 20px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    opacity: 0.3;
+    display: none;
+}
+.price .remove:after {
+    display: block;
+    content: "\f00d";
+    font-family: FontAwesome;
+}
+.price .remove:hover {
+    opacity: 0.5;
+    outline: none;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+.price .cat {
+    font-size:.7em;
+    color:#666;
+    display: none;
+}
+#items .price .costtimes, #tasks .price .costtimes {
+    display: inline-block;
+}
+#items .price .remove {
+    display: inline-block;
+}
+#items .price .cat, #tasks .price .cat {
+    display: block;
+}
+aside .parent .cat  {
+    display: none;
+}
+main {
+    padding:2em 2em 0 0;
+}
+#taskform {
+    margin:0 0 4em;
+}
+#taskform input[type="text"], #taskform textarea {
+    min-width:600px;
+}
+#taskform .uk-button.uk-active {
+    background:#00a8e6;
+    color:#fff;
+}
+#taskform .radio input {
+    display: none;
+}
+#items {
+    min-height:4em;
+}
+#save {
+    color:#fff;
+    font-weight: bold;
+    padding-left:2em;
+    padding-right:2em;
+}
+#save[disabled="disabled"] {
+    background-color: #00a8e6;
+}
+
+.progress {
+    background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-size: 30px 30px;
+    -webkit-animation: progress-bar-stripes 2s linear infinite;
+    animation: progress-bar-stripes 2s linear infinite;
+}
+
+@-webkit-keyframes progress-bar-stripes { 0% { background-position: 0 0; } 100% { background-position: 30px 0; } }
+@keyframes progress-bar-stripes { 0% { background-position: 0 0; } 100% { background-position: 30px 0; } }
+
+
+@media screen and (max-width:1300px) {
+    #taskform input[type="text"], #taskform textarea {
+        min-width:300px;
+    }
+    #items {
+        min-width:296px;
+    }
+}
+
+.ui-draggable-dragging {
+    border:2px solid #999;
+    position:absolute;
+    z-index:2;
+}
+.ui-droppable-active #items:after {
+    content:'+';
+    position:absolute;
+    font-size:4em;
+    line-height:49px;
+    color:#fff;
+    background:#ddd;
+    margin:.1rem 0 0;
+    width: 49px;
+    height: 49px;
+    text-align: center;
+}
+.ui-droppable-hover #items:after {
+    background: #00a8e6;
+    opacity:.5;
+}
+
+.task .date {
+    font-size: .8em;
+}
+.task .description {
+    font-size: .8em;
+    color:#999;
+}
+#tasks .task .name .description {
+    margin:.5em 0;
+	max-height: 3.3em;
+    overflow: hidden;
+    line-height: 1.1em;
+}
+.finalprice {
+    color:#000;
+    font-weight: bold;
+    font-size: 1.5em;
+    display: inline-block;
+    margin-left:.5em;
+}
+.task .id a {
+    display: inline-block;
+    height: 100%;
+}
+.task .id {
+    white-space: nowrap;
+}
+.state {
+    font-size: 1em;
+    line-height: 1em;
+    padding: .1em .5em;
+}
+.state.New {
+    background:#f00;
+}
+.state.InProgress {
+    background:#00a8e6;
+}
+.state.Done {
+    background:#999;
+}
+.uk-modal-header, .uk-modal-footer {
+    background: #eee;
+    font-size: 2em;
+    font-weight: bold;
+    margin:-20px;
+    padding:1em 20px;
+}
+.uk-modal-body {
+    margin:2em 0;
+}
+#periodform {
+    background: #eee;
+    padding:.5em 1em;
+    margin-bottom:2em;
+}
+
+.emptyform {
+    height:90vh;
+}
+
+#hat-nav {
+    display: inline-block;
+}
+#hat-nav a {
+    color:#fff;
+}
+.task-view {
+    padding: 2em;
+}
+.uk-modal-body .task-view {
+    padding: 0;
+}
+.task-view>.id, .task-view>.date, .task-view>.name, .task-view>.items, .task-view>.state {
+    margin: 0 0 1em;
+}
+.brand {
+    margin-left:.5em;
+}
+.BrandMarya {
+    background: #f00;
+}
+.BrandMarya:before {
+    content:'M';
+}
+.BrandEdimDoma {
+    background: #9a7b68;
+}
+.BrandEdimDoma:before {
+    content:'ed';
+}
+.BrandMia {
+    background: #b10a0a;
+}
+.BrandMia:before {
+    content:'mia';
+}
+.BrandWakeSurf {
+    background: linear-gradient(135deg, #ff179e, #00b9c7);
+}
+.BrandWakeSurf:before {
+    content:'wc';
+}
+
